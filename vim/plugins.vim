@@ -23,6 +23,8 @@ Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'jacoborus/tender.vim'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
