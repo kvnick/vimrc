@@ -83,7 +83,7 @@ map <Leader>ba :bufdo bd<cr>
 
 " Leader
 let mapleader = ','                         "The default leader is \, but a comma is much better.
-nmap <leader>w :w!<cr> 
+nmap <Leader>w :w!<cr>
 
 "| ------------------------------
 "| Search 
@@ -112,9 +112,19 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d \\  -f2-" }'<c
 imap df <Esc>l
 vmap df <Esc>l
 
+" Find and Replace all occurrences under cursor
+nnoremap <Leader>h :%s/\<<C-r><C-w>\>//g<Left><Left>
+
 "| ------------------------------
 "| Plugins
 "| ------------------------------
+
+"|
+"| Easymotion
+"|
+ nmap s <Plug>(easymotion-sn)
+ omap s <Plug>(easymotion-tn)
+
 
 "|
 "| Ariline
@@ -140,6 +150,7 @@ let g:Powerline_symbols = 'fancy'
 "| Nerd Tree
 "|
 let g:NERDTreeWinPos = 'right'
+let g:NERDTreeIgnore = ['^node_modules$']
 let NERDTreeHiijackNetrw = 0
 let NERDTreeShowHidden = 0
 nmap <F2> :NERDTreeToggle<cr>					
@@ -163,7 +174,7 @@ let g:grep_cmd_opts = '--noheading'
 "| 
 "| BufExplorer
 "|
-map <leader>o :BufExplorer<cr>
+map <Leader>o :BufExplorer<cr>
 
 "| 
 "| Syntastic

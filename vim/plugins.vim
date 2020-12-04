@@ -25,6 +25,8 @@ Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'jacoborus/tender.vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'prettier/vim-prettier'
+Plugin 'easymotion/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

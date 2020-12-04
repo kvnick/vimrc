@@ -10,6 +10,7 @@
 [submodule "vim/bundle/greplace.vim"]
 	path = vim/bundle/greplace.vim
 	url = https://github.com/skwp/greplace.vim.git
+    ignore = dirty
 [submodule "vim/bundle/lightline.vim"]
 	path = vim/bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
@@ -70,3 +71,9 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic
+[submodule "vim/bundle/vim-prettier"]
+    path = vim/bundle/vim-prettier
+    url = https://github.com/prettier/vim-prettier
+[submodule "vim/bundle/vim-easymotion"]
+    path = vim/bundle/vim-easymotion
+    url = https://github.com/easymotion/vim-easymotion
