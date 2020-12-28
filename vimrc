@@ -11,7 +11,7 @@ set backspace=indent,eol,start
 set noshowmode 
 set noerrorbells visualbell t_vb=
 
-set encoding=utf-8
+set encoding=UTF-8
 set laststatus=2
 
 "| ------------------------------
@@ -26,12 +26,14 @@ set nowb
 "| ------------------------------
 " colorscheme atom-dark-256
 try
-    colorscheme hybrid_material
+    colorscheme nord
 catch
 endtry
-set guifont=Menlo\ for\ Powerline:h14
+set guifont=Source\ Code\ for\ Powerline:h14
 " set macligatures
-set t_CO=256
+if !has('gui_running')
+    set t_CO=256
+endif
 set linespace=13
 set nowrap
 set background=dark
@@ -43,17 +45,21 @@ set guioptions-=r
 set guioptions-=R
 
 "highlight line numbers
-hi LineNr guibg=bg
-hi LineNr ctermbg=bg
+"hi LineNr guibg=bg
+"hi LineNr ctermbg=bg
 
 "Left padding for each window
 set foldcolumn=2
-hi foldcolumn guibg=bg
-hi foldcolumn ctermbg=bg
+"hi foldcolumn guibg=bg
+"hi foldcolumn ctermbg=bg
 
 "Get rid of ugly split borders
-hi vertsplit ctermfg=bg ctermbg=bg
-hi vertsplit guifg=bg guibg=bg
+"hi vertsplit ctermfg=bg ctermbg=bg
+"hi vertsplit guifg=bg guibg=bg
+
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 "| ------------------------------
 "| Tabs 
@@ -130,16 +136,88 @@ nnoremap <Leader>h :%s/\<<C-r><C-w>\>//g<Left><Left>
 "| Ariline
 "|
 " airline tabline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'default'
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#formatter = 'default'
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
 
 let g:airline_powerline_fonts = 1
 let g:enable_transparent_background = 1
-let g:airline_theme="hybrid"
+let g:airline_theme="nord"
+
+"|
+"| Lightline
+"|
+let g:lightline = {
+  \ 'colorscheme': 'nord',
+  \ 'active': {
+  \   'left': [ [ 'filename' ],
+  \             [ 'linter',  'gitbranch' ] ],
+  \   'right': [ [ 'percent', 'lineinfo' ],
+  \              [ 'fileencoding', 'filetype' ] ]
+  \ },
+  \ 'component_function': {
+  \   'modified': 'WizMod',
+  \   'readonly': 'WizRO',
+  \   'gitbranch': 'WizGit',
+  \   'filename': 'WizName',
+  \   'filetype': 'WizType',
+  \   'fileencoding': 'WizEncoding',
+  \   'mode': 'WizMode',
+  \ },
+  \ 'component_expand': {
+  \   'linter': 'WizErrors',
+  \ },
+  \ 'component_type': {
+  \   'readonly': 'error',
+  \   'linter': 'error'
+  \ },
+  \ 'separator': { 'left': '▓▒░', 'right': '░▒▓' },
+  \ 'subseparator': { 'left': '▒', 'right': '░' }
+  \ }
+
+function! WizMod()
+  return &ft =~ 'help\|vimfiler' ? '' : &modified ? '» ' : &modifiable ? '' : ''
+endfunction
+
+function! WizRO()
+  " ×   
+  return &ft !~? 'help\|vimfiler' && &readonly ? ' ' : ''
+endfunction
+
+function! WizGit()
+  return !IsTree() ? exists('*fugitive#head') ? fugitive#head() : '' : ''
+endfunction
+
+function! WizName()
+  return !IsTree() ? ('' != WizRO() ? WizRO() : WizMod()) . ('' != expand('%:t') ? expand('%:t') : '[none]') : ''
+endfunction
+
+function! WizType()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? ' ' . WebDevIconsGetFileTypeSymbol() . ' ' . &filetype : '') : ''
+endfunction
+
+function! WizEncoding()
+  return winwidth(0) > 70 ? (strlen(&fenc) ? &enc : &enc) : ''
+endfunction
+
+function! WizErrors() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  " ×   
+  return l:counts.total == 0 ? '' : printf(' %d', l:counts.total)
+endfunction
+
+function! IsTree()
+  let l:name = expand('%:t')
+  return l:name =~ 'NetrwTreeListing\|undotree\|NERD' ? 1 : 0
+endfunction
+
+"|
+"| Webdevicons
+"|
+let g:webdevicons_enable_nerdtree = 1
 
 "|
 "| Powerline

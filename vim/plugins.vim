@@ -27,6 +27,9 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'prettier/vim-prettier'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'arcticicestudio/nord-vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
