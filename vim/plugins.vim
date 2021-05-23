@@ -24,7 +24,7 @@ Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'jacoborus/tender.vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'prettier/vim-prettier'
+Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plugin 'easymotion/vim-easymotion'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'itchyny/lightline.vim'

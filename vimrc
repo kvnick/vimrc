@@ -259,6 +259,13 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+
+"|
+"| Prettier
+"|
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+
 "|
 "| Laravel Specific
 "|
