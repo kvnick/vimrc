@@ -8,14 +8,14 @@ source $HOME/.vim/plugins.vim
 syntax enable
 set number
 set backspace=indent,eol,start
-set noshowmode 
+set noshowmode
 set noerrorbells visualbell t_vb=
 
 set encoding=UTF-8
 set laststatus=2
 
 "| ------------------------------
-"| Files, backups 
+"| Files, backups
 "| ------------------------------
 set nobackup
 set noswapfile
@@ -62,7 +62,7 @@ if (has("termguicolors"))
 endif
 
 "| ------------------------------
-"| Tabs 
+"| Tabs
 "| ------------------------------
 set expandtab
 set smartindent
@@ -92,7 +92,7 @@ let mapleader = ','                         "The default leader is \, but a comm
 nmap <Leader>w :w!<cr>
 
 "| ------------------------------
-"| Search 
+"| Search
 "| ------------------------------
 set hlsearch
 set incsearch
@@ -163,7 +163,6 @@ let g:lightline = {
   \   'readonly': 'WizRO',
   \   'gitbranch': 'WizGit',
   \   'filename': 'WizName',
-  \   'filetype': 'WizType',
   \   'fileencoding': 'WizEncoding',
   \   'mode': 'WizMode',
   \ },
@@ -183,7 +182,6 @@ function! WizMod()
 endfunction
 
 function! WizRO()
-  " ×   
   return &ft !~? 'help\|vimfiler' && &readonly ? ' ' : ''
 endfunction
 
@@ -195,17 +193,12 @@ function! WizName()
   return !IsTree() ? ('' != WizRO() ? WizRO() : WizMod()) . ('' != expand('%:t') ? expand('%:t') : '[none]') : ''
 endfunction
 
-function! WizType()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? ' ' . WebDevIconsGetFileTypeSymbol() . ' ' . &filetype : '') : ''
-endfunction
-
 function! WizEncoding()
   return winwidth(0) > 70 ? (strlen(&fenc) ? &enc : &enc) : ''
 endfunction
 
 function! WizErrors() abort
   let l:counts = ale#statusline#Count(bufnr(''))
-  " ×   
   return l:counts.total == 0 ? '' : printf(' %d', l:counts.total)
 endfunction
 
@@ -231,30 +224,30 @@ let g:NERDTreeWinPos = 'right'
 let g:NERDTreeIgnore = ['^node_modules$']
 let NERDTreeHiijackNetrw = 0
 let NERDTreeShowHidden = 0
-nmap <F2> :NERDTreeToggle<cr>					
+nmap <F2> :NERDTreeToggle<cr>
 nmap <D-k><D-b> :NERDTreeToggle<cr>
 
-"| 
+"|
 "| CtrlP
-"| 
+"|
 let g:ctrlp_custom_ignore = 'node_modules\DS_Strore\|git'
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 nmap <c-R> :CtrlPBufTag<cr>
 nmap <D-e> :CtrlPMRUFiles<cr>
 nmap <D-t> <Plug>PeepOpen
 
-"| 
+"|
 "| Greplace.vim
 "|
 set grepprg=ack
 let g:grep_cmd_opts = '--noheading'
 
-"| 
+"|
 "| BufExplorer
 "|
 map <Leader>o :BufExplorer<cr>
 
-"| 
+"|
 "| Syntastic
 "|
 set statusline+=%#warningmsg#
@@ -267,7 +260,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 "|
-"| Laravel Specific 
+"| Laravel Specific
 "|
 nmap <Leader>lm :!php artisan make:
 nmap <Leader>lr :e routes/web.php<cr>
@@ -278,7 +271,7 @@ nmap <Leader><Leader>v :e resources/views/<cr>
 "| ------------------------------
 "| Run code
 "| ------------------------------
-" todo: check for terminal 
+" todo: check for terminal
 autocmd FileType php noremap <Leader>r :! clear && php -f %<cr>
 autocmd FileType javascript noremap <Leader>r :! clear && node %<cr>
 
