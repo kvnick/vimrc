@@ -90,6 +90,8 @@ map <Leader>ba :bufdo bd<cr>
 " Leader
 let mapleader = ','                         "The default leader is \, but a comma is much better.
 nmap <Leader>w :w!<cr>
+nmap <Leader>q :q!<cr>
+nmap <Leader>wq :wq!<cr>
 
 "| ------------------------------
 "| Search
@@ -104,7 +106,7 @@ set incsearch
 " nmap - mapping sprcial for NORMAL mode
 " imap - mapping special for INSERT mode
 nmap <Leader>ev :vsp $MYVIMRC<cr>
-nmap <Leader>es :e $HOME/.vim/snippets/
+nmap <Leader>es :e $HOME/.vim/snippets/<cr>
 nmap <Leader>ssh :e ~/.ssh/config<cr>
 map <Leader>zsh :e ~/.zshrc<cr>
 
@@ -220,7 +222,7 @@ let g:Powerline_symbols = 'fancy'
 "|
 "| Nerd Tree
 "|
-let g:NERDTreeWinPos = 'right'
+let g:NERDTreeWinPos = 'left'
 let g:NERDTreeIgnore = ['^node_modules$']
 let NERDTreeHiijackNetrw = 0
 let NERDTreeShowHidden = 0
