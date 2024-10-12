@@ -17,7 +17,6 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-surround'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'kristijanhusak/vim-hybrid-material' 
-Plugin 'flazz/vim-colorschemes'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'jacoborus/tender.vim'
 Plugin 'jlanzarotta/bufexplorer'
