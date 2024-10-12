@@ -230,24 +230,16 @@ nmap <F2> :NERDTreeToggle<cr>
 nmap <D-k><D-b> :NERDTreeToggle<cr>
 
 "|
-"| CtrlP
-"|
-let g:ctrlp_custom_ignore = 'node_modules\DS_Strore\|git'
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
-nmap <c-R> :CtrlPBufTag<cr>
-nmap <D-e> :CtrlPMRUFiles<cr>
-nmap <D-t> <Plug>PeepOpen
-
-"|
 "| Greplace.vim
 "|
 set grepprg=ack
 let g:grep_cmd_opts = '--noheading'
 
 "|
-"| BufExplorer
+"| Fzf
 "|
-map <Leader>o :BufExplorer<cr>
+map <Leader>o :Buffers<cr>
+map <c-P> :Files<cr>
 
 "|
 "| Syntastic
@@ -268,15 +260,6 @@ let g:syntastic_check_on_wq = 0
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
-"|
-"| Laravel Specific
-"|
-nmap <Leader>lm :!php artisan make:
-nmap <Leader>lr :e routes/web.php<cr>
-nmap <Leader><Leader>c :e app/Http/Controllers/<cr>
-nmap <Leader><Leader>m :e app/<cr>
-nmap <Leader><Leader>v :e resources/views/<cr>
-
 "| ------------------------------
 "| Run code
 "| ------------------------------
@@ -291,21 +274,6 @@ augroup autosourcing
     " if vimrc is linked to another file
     execute "autocmd! BufWritePost ".resolve(expand($MYVIMRC))." source $MYVIMRC"
 augroup END
-
-function! IPhpInsertUse()
-    call PhpInsertUse()
-    call feedkeys('a',  'n')
-endfunction
-autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
-autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
-
-function! IPhpExpandClass()
-    call PhpExpandClass()
-    call feedkeys('a', 'n')
-endfunction
-
-autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
-autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
 
 "| ------------------------------
 "| Sourcing nginx syntax

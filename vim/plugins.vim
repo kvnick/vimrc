@@ -10,25 +10,26 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'skwp/greplace.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-surround'
 Plugin 'StanAngeloff/php.vim'
-Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'kristijanhusak/vim-hybrid-material' 
 Plugin 'flazz/vim-colorschemes'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'jacoborus/tender.vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plugin 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plugin 'easymotion/vim-easymotion'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'junegunn/fzf', { 'do' : { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
