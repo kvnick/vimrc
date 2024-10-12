@@ -308,6 +308,11 @@ autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
 
 "| ------------------------------
+"| Sourcing nginx syntax
+"| ------------------------------
+source $HOME/.vim/nginx.vim
+
+"| ------------------------------
 "| Sourcing local vimrc
 "| ------------------------------
 if filereadable(expand("$HOME/.vimrc.local"))
