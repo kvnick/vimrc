@@ -21,7 +21,6 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'jacoborus/tender.vim'
 Plugin 'jlanzarotta/bufexplorer'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plugin 'easymotion/vim-easymotion'
 Plugin 'arcticicestudio/nord-vim'

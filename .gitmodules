@@ -56,9 +56,6 @@
 [submodule "vim/bundle/bufexplorer"]
     path = vim/bundle/bufexplorer
     url = https://github.com/jlanzarotta/bufexplorer.git
-[submodule "vim/bundle/syntastic"]
-    path = vim/bundle/syntastic
-    url = https://github.com/vim-syntastic/syntastic
 [submodule "vim/bundle/vim-prettier"]
     path = vim/bundle/vim-prettier
     url = https://github.com/prettier/vim-prettier
