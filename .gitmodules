@@ -1,64 +1,64 @@
 [submodule "vim/bundle/Vundle.vim"]
-	path = vim/bundle/Vundle.vim
-	url = https://github.com/VundleVim/Vundle.vim.git
+    path = vim/bundle/Vundle.vim
+    url = https://github.com/VundleVim/Vundle.vim.git
 [submodule "vim/bundle/ack.vim"]
-	path = vim/bundle/ack.vim
-	url = https://github.com/mileszs/ack.vim.git
+    path = vim/bundle/ack.vim
+    url = https://github.com/mileszs/ack.vim.git
 [submodule "vim/bundle/greplace.vim"]
-	path = vim/bundle/greplace.vim
-	url = https://github.com/skwp/greplace.vim.git
+    path = vim/bundle/greplace.vim
+    url = https://github.com/skwp/greplace.vim.git
     ignore = dirty
 [submodule "vim/bundle/lightline.vim"]
-	path = vim/bundle/lightline.vim
-	url = https://github.com/itchyny/lightline.vim.git
+    path = vim/bundle/lightline.vim
+    url = https://github.com/itchyny/lightline.vim.git
 [submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+    path = vim/bundle/nerdtree
+    url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/onehalf"]
-	path = vim/bundle/onehalf
-	url = https://github.com/sonph/onehalf.git
+    path = vim/bundle/onehalf
+    url = https://github.com/sonph/onehalf.git
 [submodule "vim/bundle/php.vim"]
-	path = vim/bundle/php.vim
-	url = https://github.com/StanAngeloff/php.vim.git
+    path = vim/bundle/php.vim
+    url = https://github.com/StanAngeloff/php.vim.git
 [submodule "vim/bundle/tender.vim"]
-	path = vim/bundle/tender.vim
-	url = https://github.com/jacoborus/tender.vim.git
+    path = vim/bundle/tender.vim
+    url = https://github.com/jacoborus/tender.vim.git
 [submodule "vim/bundle/tlib_vim"]
-	path = vim/bundle/tlib_vim
-	url = https://github.com/tomtom/tlib_vim.git
+    path = vim/bundle/tlib_vim
+    url = https://github.com/tomtom/tlib_vim.git
 [submodule "vim/bundle/vim-addon-mw-utils"]
-	path = vim/bundle/vim-addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+    path = vim/bundle/vim-addon-mw-utils
+    url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "vim/bundle/vim-airline"]
-	path = vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
+    path = vim/bundle/vim-airline
+    url = https://github.com/vim-airline/vim-airline.git
 [submodule "vim/bundle/vim-airline-themes"]
-	path = vim/bundle/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
+    path = vim/bundle/vim-airline-themes
+    url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "vim/bundle/vim-colorschemes"]
-	path = vim/bundle/vim-colorschemes
-	url = https://github.com/flazz/vim-colorschemes.git
+    path = vim/bundle/vim-colorschemes
+    url = https://github.com/flazz/vim-colorschemes.git
 [submodule "vim/bundle/vim-fugitive"]
-	path = vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
+    path = vim/bundle/vim-fugitive
+    url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/vim-hybrid-material"]
-	path = vim/bundle/vim-hybrid-material
-	url = https://github.com/kristijanhusak/vim-hybrid-material.git
+    path = vim/bundle/vim-hybrid-material
+    url = https://github.com/kristijanhusak/vim-hybrid-material.git
 [submodule "vim/bundle/vim-snipmate"]
-	path = vim/bundle/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate.git
+    path = vim/bundle/vim-snipmate
+    url = https://github.com/garbas/vim-snipmate.git
 [submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
+    path = vim/bundle/vim-surround
+    url = https://github.com/tpope/vim-surround.git
 [submodule "vim/bundle/vim-vinegar"]
-	path = vim/bundle/vim-vinegar
-	url = https://github.com/tpope/vim-vinegar.git
+    path = vim/bundle/vim-vinegar
+    url = https://github.com/tpope/vim-vinegar.git
 [submodule "vim/bundle/bufexplorer"]
-	path = vim/bundle/bufexplorer
-	url = https://github.com/jlanzarotta/bufexplorer.git
+    path = vim/bundle/bufexplorer
+    url = https://github.com/jlanzarotta/bufexplorer.git
 [submodule "vim/bundle/syntastic"]
-	path = vim/bundle/syntastic
-	url = https://github.com/vim-syntastic/syntastic
+    path = vim/bundle/syntastic
+    url = https://github.com/vim-syntastic/syntastic
 [submodule "vim/bundle/vim-prettier"]
     path = vim/bundle/vim-prettier
     url = https://github.com/prettier/vim-prettier
