@@ -71,6 +71,9 @@
 [submodule ".vim/bundle/fzf.vim"]
 	path = .vim/bundle/fzf.vim
     url = https://github.com/junegunn/fzf.vim
+[submodule ".vim/bundle/fzf"]
+	path = .vim/bundle/fzf
+    url = https://github.com/junegunn/fzf
 [submodule ".vim/bundle/vim-colorschemes"]
 	path = .vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
