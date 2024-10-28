@@ -65,8 +65,11 @@
 [submodule "vim/bundle/nord-vim"]
     path = vim/bundle/nord-vim
     url = https://github.com/arcticicestudio/nord-vim
-[submodule "vim/bundle/fzf"]
-    path = vim/bundle/fzf
+[submodule "vim/bundle/vim-devicons"]
+	path = vim/bundle/vim-devicons
+    url = https://github.com/ryanoasis/vim-devicons
+[submodule "vim/bundle/fzf.vim"]
+    path = vim/bundle/fzf.vim
     url = https://github.com/junegunn/fzf.vim
 [submodule "vim/bundle/vim-colorschemes"]
 	path = vim/bundle/vim-colorschemes

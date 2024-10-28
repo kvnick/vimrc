@@ -16,7 +16,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-surround'
 Plugin 'StanAngeloff/php.vim'
-Plugin 'kristijanhusak/vim-hybrid-material' 
+Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'jacoborus/tender.vim'
 Plugin 'jlanzarotta/bufexplorer'
